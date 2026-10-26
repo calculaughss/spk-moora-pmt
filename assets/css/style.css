@@ -1,0 +1,93 @@
+:root {
+  --spk-green: #2e7d32;
+  --spk-green-dark: #1b5e20;
+  --spk-green-light: #e8f5e9;
+  --spk-gray: #f4f6f8;
+  --spk-gray-dark: #6c757d;
+}
+
+body {
+  background-color: var(--spk-gray);
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* ---------- Login ---------- */
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--spk-green-dark), var(--spk-green));
+}
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  border-radius: 16px;
+}
+.login-icon {
+  font-size: 2.5rem;
+  color: var(--spk-green);
+}
+
+/* ---------- Navbar ---------- */
+.app-navbar {
+  background-color: var(--spk-green-dark);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+.app-navbar .navbar-brand { color: #fff; }
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  bottom: 0;
+  width: 240px;
+  background: #fff;
+  border-right: 1px solid #e0e0e0;
+  overflow-y: auto;
+  z-index: 1020;
+  transition: transform 0.2s ease;
+}
+.sidebar .nav-link {
+  color: #444;
+  padding: 0.7rem 1.25rem;
+  border-left: 3px solid transparent;
+}
+.sidebar .nav-link:hover {
+  background: var(--spk-green-light);
+  color: var(--spk-green-dark);
+}
+.sidebar .nav-link.active {
+  background: var(--spk-green-light);
+  color: var(--spk-green-dark);
+  border-left-color: var(--spk-green);
+  font-weight: 600;
+}
+
+.main-content {
+  margin-left: 240px;
+  padding-top: 0.5rem;
+  min-height: calc(100vh - 56px);
+}
+
+@media (max-width: 991.98px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.show { transform: translateX(0); }
+  .main-content { margin-left: 0; }
+}
+
+/* ---------- Cards / widgets ---------- */
+.stat-card {
+  border: none;
+  border-radius: 14px;
+  color: #fff;
+}
+.stat-card.bg-green { background: var(--spk-green); }
+.stat-card.bg-gray { background: var(--spk-gray-dark); }
+.stat-card i { font-size: 2rem; opacity: 0.85; }
+
+.card { border-radius: 12px; }
+.table thead th { background: var(--spk-green-light); color: var(--spk-green-dark); }

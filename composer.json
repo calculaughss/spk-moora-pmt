@@ -1,0 +1,9 @@
+{
+    "name": "skripsi/spk-pmt-moora",
+    "description": "SPK Penerima PMT - MOORA + Z-score WHO",
+    "require": {
+        "php": ">=8.0",
+        "phpoffice/phpspreadsheet": "^1.29",
+        "dompdf/dompdf": "^2.0"
+    }
+}
